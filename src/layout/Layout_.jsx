@@ -6,6 +6,7 @@ import SToggleButton from '../menu/_SToggleButton.jsx';
 import { useSideMenuBadgeUpdate } from '../menu/_SMenuHooks.jsx';
 import PageTemplate_ from './PageTemplate_.jsx';
 import ToggleThemeButton from '../theme/ToggleThemeButton.jsx';
+import Typography from '@mui/material/Typography';
 import Note from '@/components/Note.jsx';
 import MMLeft from "./ColumnLeft.jsx";
 import MMRight from "@/layout/ColumnRight.jsx"; // Import the Note component
@@ -17,13 +18,14 @@ function Layout_() {
 
     return (
         <PageTemplate_
-            sideMenu={<MMLeft   title="Momento" logo="./src/assets/momento.png"
+            sideMenu={<MMLeft   title="Menu" logo="./src/assets/momento.png"
                 hClick={() => { console.log("headerOnClick") }}
                 mClick={onClickHandler} />}
 
             pageHeader={
                 <Stack  direction="row" justifyContent="space-between"  alignItems="center" spacing={2} className='w-100'>
                     <SToggleButton icon={<VerticalSplitIcon />} />
+                        <Typography className="text-truncate" variant="h5" sx={{pl: 0.5}} > { "Learning Notes" } </Typography>
                     <ToggleThemeButton />
                 </Stack>
             }
@@ -31,7 +33,7 @@ function Layout_() {
             children={<Note />}
 
             rightColumn={<MMRight
-                title="Momento Right"
+                title="ChatGPT"
                 logo="./src/assets/momento.png"
                 hClick={() => { console.log("headerOnClick") }}
                 mClick={onClickHandler} />

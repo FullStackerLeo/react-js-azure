@@ -36,7 +36,7 @@ const RightHeader = ({
                     }
                 </Avatar>
 
-                <Typography className="text-truncate" variant="h5" sx={{pl: 0.5}} > { title ||  "Momento" } </Typography>
+                <Typography className="text-truncate" variant="h6" sx={{pl: 0.5}} > { title ||  "Momento" } </Typography>
             </Stack>
         </Box>
     )

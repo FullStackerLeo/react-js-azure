@@ -48,7 +48,7 @@ const SideMenuHeader = ({
                     }
                 </Avatar>
 
-                <Typography className="text-truncate" variant="h5" sx={{pl: 0.5}} > { title ||  "码蚁基地" } </Typography>
+                <Typography className="text-truncate" variant="h6" sx={{pl: 0.5}} > { title ||  "Momento" } </Typography>
             </Stack>
         </Box>
     )
