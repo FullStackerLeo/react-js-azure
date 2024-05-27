@@ -8,7 +8,7 @@ import Note from "@/components/Note.jsx";
 import ChatBot from "@/components/ChatBot.jsx";
 
 function FnRight({title,logo,hClick,mClick,footer,}) {
-    const openWidth = 450;
+    const openWidth = 300;
     const minWidth = 65;
     const open = true; // Placeholder for menu state
 

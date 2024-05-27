@@ -37,6 +37,7 @@ const SideMenuHeader = ({
                         cursor: "pointer",
                         transition: '0.2s',
                         transform: open ? 'scale(1)' : 'scale(1.2)',
+                        color: 'primary',
                     }}
                     src={logo}
                     variant="rounded"
