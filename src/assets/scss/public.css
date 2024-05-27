@@ -1,0 +1,214 @@
+html {
+    background-color:#f2f2f2;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 18px;
+    line-height: 1.667;
+    color: #222;
+    text-align: justify;
+    word-wrap: break-word;
+    word-break: break-word;
+    -moz-hyphens: auto;
+    hyphens: auto;
+}
+
+input,
+textarea {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.4;
+    background: #eee;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+    color: #353535d9;
+    overflow-wrap: break-word;
+}
+
+:not(pre) > code {
+    background-color: rgb(214, 214, 214);
+    border-radius: 3px;
+    padding: 1px 3px;
+}
+
+img {
+    max-width: 100%;
+    max-height: 20em;
+}
+
+.page-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color:white;
+    min-height: 100vh;
+}
+
+.layout-content{
+    margin: 10px, 0px;
+    padding: 0px;
+    min-height: 100%;
+    flex: 1;
+    text-align:justify;
+}
+
+.content-wrap {
+    padding-bottom: 2.5rem;    /* Footer height */
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;            /* Footer height */
+    padding: 20px 0;
+    /* box-shadow: 3px 0 5px #c9c9c9; */
+}
+
+blockquote {
+    border-left: 2px solid rgb(1, 154, 192);
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 10px;
+    color: rgb(150, 150, 150);
+    font-style: italic;
+}
+
+blockquote[dir='rtl'] {
+    border-left: none;
+    padding-left: 0;
+    padding-right: 10px;
+    border-right: 2px solid #ddd;
+}
+
+input {
+    box-sizing: border-box;
+    font-size: 0.85em;
+    width: 100%;
+    padding: 0.5em;
+    border: 2px solid #ddd;
+    background: #fafafa;
+}
+
+input:focus {
+    outline: 0;
+    border-color: blue;
+}
+
+iframe {
+    width: 100%;
+    border: 1px solid #eee;
+}
+
+[data-slate-editor] > * + * {
+    margin-top: 1em;
+}
+
+#root{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color:#f2f2f2;
+}
+
+.alignCenterVH{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.mainBoxPosition{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+}
+
+.titleInput {
+    display: block;
+    width: 100%;
+    font-weight: bold;
+    min-height: 50px;
+    font-size: 22px;
+    border:none;
+    border-bottom: 1px;
+    border-color: rgb(190, 190, 190);
+    outline:none;
+}
+
+.selectElement {
+    display: block;
+    max-width: 100%;
+    max-height: 20em;
+}
+
+.imgsubstring {
+    display: block;
+    color:rgb(116, 116, 116);
+    font-weight: 500;
+    font-size: medium;
+    padding: 5px;
+    text-align: center;
+}
+
+.mayi-select {
+    width: 400px; height: 200px;line-height: 200px;text-align: center;margin:auto;
+    border: 1px solid #ccc;
+    background: linear-gradient(#efefef,#ccc) padding-box,
+    linear-gradient(135deg, rgba(0, 0, 0, 1) 25%, transparent 25%, transparent 50%, rgba(1, 1, 1, 1) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+    background-size:100% 100%, 8px 8px;
+    animation: bg 1s linear infinite;
+}
+
+.mayi-select:hover{
+    cursor: pointer;
+    border: 1px dashed transparent;
+}
+
+@keyframes bg {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 8px 0;
+    }
+}
+
+.alignCenter {
+    display: table-cell;
+    /*垂直居中 */
+    vertical-align: middle;
+    /*水平居中*/
+    text-align: center;
+
+    /* text-align: center;
+      background-color: #fff;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%); */
+}
+
+.site-layout-background{
+    background-color: white;
+}
+
+.check-background {
+    width: 100px;
+    height: 100px;
+    background-image: url('data:image/svg+xml,\
+  <svg xmlns="http://www.w3.org/2000/svg"\
+        width="100" height="100" fill-opacity=".25">\
+    <rect x="50" width="50" height="50"></rect>\
+    <rect y="50" width="50" height="50"></rect>\
+    </svg>');
+    background-size:50px 50px;
+}
