@@ -10,6 +10,11 @@ import Badge from '@mui/material/Badge';
 import SvgIcon from '@mui/material/SvgIcon';
 import CssBaseline from '@mui/material/CssBaseline';
 import StyledBadge from './_SideMenuStyledBadge';
+import { red } from '@mui/material/colors';
+import { green } from '@mui/material/colors';
+import { blue } from '@mui/material/colors';
+import { yellow } from '@mui/material/colors';
+import MusicVideoIcon from '@mui/icons-material/MusicVideo';
 
 import { useSideMenuBadge, useSideMenuState, useSideMenuStateUpdate } from './_SMenuHooks';
 
@@ -24,7 +29,7 @@ import { useSideMenuBadge, useSideMenuState, useSideMenuStateUpdate } from './_S
  * @returns
  */
 function SideMenuSubItem({
-                             icon = null,
+                             icon = MusicVideoIcon,
                              title,
                              id,
                              groupId,
@@ -62,7 +67,7 @@ function SideMenuSubItem({
                         vertical: 'top',
                         horizontal: 'left',
                     }}
-                    color="error">
+                    color="blue">
                     <ListItemIcon
                         sx={{
                             '& svg': {
@@ -88,22 +93,22 @@ function SideMenuSubItem({
                                     }}
                                     variant="rounded"
                                 > {title.substring(0, 1).toUpperCase()} </Avatar> :
-                                <SvgIcon component={icon} sx={{ fontSize: 16 }} />
+                                <SvgIcon component={icon} sx={{ fontSize: 16 }} color="primary" />
+
 
                         }
                     </ListItemIcon>
                 </Badge>
             </Tooltip>
 
-            <StyledBadge badgeContent={badgeCount[id]} color="error">
+            <StyledBadge badgeContent={badgeCount[id]} color="blue">
                 <ListItemText
                     primary={
                         <Typography
                             sx={{ display: 'inline' }}
                             component="span"
                             variant="body1"
-                            color="text.secondary"
-                        >
+                            color="text.secondary"                        >
                             {title}
                         </Typography>
                     }

@@ -14,6 +14,7 @@ import StyledBadge from './_SideMenuStyledBadge';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import { grey } from '@mui/material/colors';
+import { red } from '@mui/material/colors';
 
 import { useSideMenuState, useSideMenuStateUpdate, useSideMenuBadge } from './_SMenuHooks';
 import SMenuSubItem from './_SideMenuSubItem';

@@ -8,6 +8,8 @@ import { useSideMenuBadge, useSideMenuState, useSideMenuStateUpdate } from './_S
 import StyledBadge from './_SideMenuStyledBadge';
 import Badge from '@mui/material/Badge';
 import { grey } from '@mui/material/colors';
+import { red } from '@mui/material/colors';
+import SportsGymnasticsIcon from '@mui/icons-material/SportsGymnastics';
 
 /**
  * 主菜单项组件
@@ -20,7 +22,7 @@ import { grey } from '@mui/material/colors';
 const SideMenuItem = ({
                           title,
                           id,
-                          icon = null,
+                          icon = SportsGymnasticsIcon,
                           onClick,
                       }) => {
     const {activeItemId, open} = useSideMenuState();
@@ -36,8 +38,7 @@ const SideMenuItem = ({
     return (
         <ListItemButton
             selected={ activeItemId == id }
-            onClick={itemClickeEvent}
-        >
+            onClick={itemClickeEvent}   >
             <Tooltip title={open ? null : title} arrow placement="right">
                 <Badge
                     badgeContent={open ? 0 : badgeCount[id]}
@@ -47,7 +48,7 @@ const SideMenuItem = ({
                     }}
                     color="error">
                     <ListItemIcon
-                        sx={{
+                        sx={{                            
                             '& svg': {
                                 transition: '0.2s',
                                 transform: open ? 'scale(1)' : 'scale(1.2)',
@@ -66,20 +67,20 @@ const SideMenuItem = ({
                                         width: 30,
                                         height: 30,
                                         fontSize: 18,
-                                        bgcolor:grey[700],
+                                        bgcolor:red[700],
                                         transition: '0.2s',
                                         transform: open ? 'scale(1)' : 'scale(1.2)'
                                     }}
                                     variant="rounded">
                                     {title.substring(0, 1).toUpperCase()}
                                 </Avatar> :
-                                <SvgIcon component={icon} />
+                                <SvgIcon component={icon}  color="secondary" />
                         }
                     </ListItemIcon>
                 </Badge>
             </Tooltip>
 
-            <StyledBadge badgeContent={badgeCount[id]} color="error">
+            <StyledBadge badgeContent={badgeCount[id]} color="success">
                 <ListItemText primary={title}/>
             </StyledBadge>
 

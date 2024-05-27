@@ -3,13 +3,14 @@ import VerticalSplitIcon from '@mui/icons-material/VerticalSplit';
 import Stack from '@mui/material/Stack';
 
 import SToggleButton from '../menu/_SToggleButton.jsx';
-import { useSideMenuBadgeUpdate } from '../menu/_SMenuHooks.jsx';
-import PageTemplate_ from './PageTemplate_.jsx';
 import ToggleThemeButton from '../theme/ToggleThemeButton.jsx';
 import Typography from '@mui/material/Typography';
+
+import PageTemplate_ from './PageTemplate_.jsx';
+import { useSideMenuBadgeUpdate } from '@/menu/_SMenuHooks.jsx';
 import Note from '@/components/Note.jsx';
-import MMLeft from "./ColumnLeft.jsx";
-import MMRight from "@/layout/ColumnRight.jsx"; // Import the Note component
+import MMLeft  from "./ColumnLeft.jsx";
+import MMRight from "./ColumnRight.jsx";
 
 function Layout_() {
     const updateBadge = useSideMenuBadgeUpdate();
@@ -18,7 +19,7 @@ function Layout_() {
 
     return (
         <PageTemplate_
-            sideMenu={<MMLeft   title="Menu" logo="./src/assets/momento.png"
+            sideMenu={<MMLeft   title="Menu" logo="/src/assets/img/momento.png"
                 hClick={() => { console.log("headerOnClick") }}
                 mClick={onClickHandler} />}
 
@@ -34,7 +35,7 @@ function Layout_() {
 
             rightColumn={<MMRight
                 title="ChatGPT"
-                logo="./src/assets/momento.png"
+                logo="/src/assets/img/momento.png"
                 hClick={() => { console.log("headerOnClick") }}
                 mClick={onClickHandler} />
             }
