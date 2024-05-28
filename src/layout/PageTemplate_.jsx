@@ -6,7 +6,11 @@ import Paper from '@mui/material/Paper';
 function PageTemplate_({ sideMenu, pageHeader , children, rightColumn }) {
     return (
         <Paper className='d-flex overflow-hidden position-absolute w-100 h-100 p-0 m-0'>
-            <Box className='h-100' sx={{ height: 68 }}>
+            <Box className='h-100' sx={{ 
+                height: 68 ,
+                bgcolor: 'rgba(0, 0, 0, 0.1)',
+
+            }}>
                 {                    sideMenu                }
             </Box>
 
@@ -22,7 +26,11 @@ function PageTemplate_({ sideMenu, pageHeader , children, rightColumn }) {
                 </Box>
             </Box>
 
-            <Box className='h-100'>
+            <Box className='h-100' sx={{ 
+                height: 68 ,
+                bgcolor: 'rgba(0, 0, 0, 0.1)',
+
+            }}>
                 {
                     rightColumn
                 }

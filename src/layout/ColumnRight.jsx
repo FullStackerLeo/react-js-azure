@@ -1,14 +1,11 @@
 // ColumnRight.jsx
 
 import Box from '@mui/system/Box';
-import Divider from '@mui/material/Divider';
-import { List } from '@mui/material';
 import RightHeader from "@/menu/_RightHeader.jsx";
-import Note from "@/components/Note.jsx";
 import ChatBot from "@/components/ChatBot1.jsx";
 
 function FnRight({title,logo,hClick,mClick,footer,}) {
-    const openWidth = 600;
+    const openWidth = 400;
     const minWidth = 65;
     const open = true; // Placeholder for menu state
 

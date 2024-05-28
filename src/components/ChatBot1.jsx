@@ -50,7 +50,7 @@ function ChatBot() {
                 <div className='spotlight__wraper'>
                     <input className='spotlight__input'
                         type='text'
-                        placeholder='input somehting'
+                        placeholder="Let's Chat"
                         disabled={loading}
                         style={{ backgroundImage: loading ? `url(${loadingGif})`:`url(${lens})` }}
                         // style={{backgroundImage: loading ? `url($loadingGif})` : `url($lens})`,}} 
