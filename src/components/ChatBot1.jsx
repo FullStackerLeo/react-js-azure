@@ -27,7 +27,7 @@ function ChatBot() {
                 body: JSON.stringify({prompt}),
             };
 
-            const res = await fetch('http://localhost:3001/ask', requestOptions)
+            const res = await fetch('https://fullstacker.azurewebsites.net/ask', requestOptions)
 
             if (!res.ok){                throw new Error("wrongg")            }
 
@@ -52,7 +52,8 @@ function ChatBot() {
                         type='text'
                         placeholder='input somehting'
                         disabled={loading}
-                        style={{backgroundImage: loading ? `url($loadingGif})` : `url($lens})`,}} 
+                        style={{ backgroundImage: loading ? `url(${loadingGif})`:`url(${lens})` }}
+                        // style={{backgroundImage: loading ? `url($loadingGif})` : `url($lens})`,}} 
 
                         onChange  = {(e) => updatePrompt(e.target.value)}
                         onKeyDown = {(e)=>sendPrompt(e)}            />

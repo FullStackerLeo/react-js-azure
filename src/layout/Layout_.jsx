@@ -35,7 +35,7 @@ function Layout_() {
 
             rightColumn={<MMRight
                 title="ChatGPT"
-                logo="/src/assets/img/momento.png"
+                logo="/src/assets/img/openai.png"
                 hClick={() => { console.log("headerOnClick") }}
                 mClick={onClickHandler} />
             }
