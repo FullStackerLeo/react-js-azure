@@ -19,7 +19,7 @@ function Layout_() {
 
     return (
         <PageTemplate_
-            sideMenu={<MMLeft   title="Menu" logo="/src/assets/img/momento.png"
+            sideMenu={<MMLeft   title="Menu" logo="/momento.png"
                 hClick={() => { console.log("headerOnClick") }}
                 mClick={onClickHandler} />}
 
@@ -35,7 +35,7 @@ function Layout_() {
 
             rightColumn={<MMRight
                 title="ChatGPT"
-                logo="/src/assets/img/openai.png"
+                logo="/openai.png"
                 hClick={() => { console.log("headerOnClick") }}
                 mClick={onClickHandler} />
             }
