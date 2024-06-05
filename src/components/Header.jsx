@@ -18,7 +18,7 @@ import slack    from '/src/static/picture/slack.png'
 import moon     from '/src/static/picture/moon.png'
 
 
-function Header() {
+const  Header = ({ handleRegisterClick } ) => {
   return (
     <header id="page-topbar">
     <div className="navbar-header">
@@ -61,10 +61,7 @@ function Header() {
 
             <div className="dropdown d-inline-block d-lg-none ms-2">
                 <button type="button" className="btn header-item" id="page-header-search-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    {/* <i data-feather="search" className="icon-lg"></i> */}
-                    <svg className="icon-lg" viewBox="0 0 24 24">
-                        <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
-                    </svg>
+                    <svg className="icon-lg" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" /></svg>
                 </button>
                 <div className="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0" aria-labelledby="page-header-search-dropdown">
 
@@ -286,11 +283,13 @@ function Header() {
                     <i className="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
                 </button>
                 <div className="dropdown-menu dropdown-menu-end">
-                    {/* <!-- item--> */}
                     <a className="dropdown-item" href="apps-contacts-profile.html"><i className="mdi mdi-face-profile font-size-16 align-middle me-1"></i> Profile</a>
                     <a className="dropdown-item" href="auth-lock-screen.html"><i className="mdi mdi-lock font-size-16 align-middle me-1"></i> Lock screen</a>
                     <div className="dropdown-divider"></div>
-                    <a className="dropdown-item" href="auth-logout.html"><i className="mdi mdi-logout font-size-16 align-middle me-1"></i> Logout</a>
+                    <a className="dropdown-item" href="#" onClick={(e)=>{
+                        e.preventDefault();
+                        handleRegisterClick();
+                    }}><i className="mdi mdi-logout font-size-16 align-middle me-1"></i> Logout/Register</a>
                 </div>
             </div>
         </div>

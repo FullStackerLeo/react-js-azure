@@ -6,10 +6,13 @@ import SidebarLeft from './components/SidebarLeft';
 import MainContent from './components/MainContent';
 
 function App() {
+    const handleRegisterClick = () => {
+        // You can add additional logic here if needed
+    };
 
-  return (
+    return (
         <div id="layout-wrapper">
-            <Header />
+            <Header handleRegisterClick={handleRegisterClick} />
             <SidebarLeft />
             <MainContent />
             <Footer />
